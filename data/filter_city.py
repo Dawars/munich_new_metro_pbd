@@ -55,4 +55,4 @@ print(city_df)
 
 # todo update population data
 
-city_df.to_csv('munich.csv', index=False)
+city_df.to_csv('munich.csv', sep=';', index=False)
