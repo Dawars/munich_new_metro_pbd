@@ -47,12 +47,10 @@ pd.set_option('display.max_columns', None)
 # print(germany_df.head())
 
 # cities in germany
-# print(set(germany_df['ort']))
-city_name = 'München'
-city_df = germany_df[germany_df['ort'] == city_name].reset_index()
+print(set(germany_df['ort']))
+city_df = germany_df[germany_df['ort'].isin(['München', 'Garching bei München'])].reset_index()
 # print(city_df.head())
 print(city_df)
 
-# todo update population data
-
+# todo remove 2nd 81545 line manually
 city_df.to_csv('munich.csv', sep=';', index=False)
